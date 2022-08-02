@@ -1,0 +1,516 @@
+
+@font-face {   
+    font-family:"e2Bp";
+    src: url(../images/Fuentes/SfDistantGalaxyAltoutline-e2Bp.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+.logoStarWars{
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+}
+    
+
+.menu{
+    margin: 15px;
+    display: flex;
+}
+
+
+ul{
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li a{
+    border: 12px inset rgba(181, 169, 164, 1);
+    font-size: 27px;
+    font-family: 'e2Bp';
+    font-weight: bold;
+    color: black;
+    padding: 15px;
+    background: linear-gradient(45deg, rgba(255,255,255,1) 3%, rgba(173,173,173,1) 15%, rgba(255,255,255,1) 33%, rgba(162,162,162,1) 57%, rgba(255,255,255,1) 75%, rgba(185,185,185,1) 91%, rgba(249,249,249,1) 100%);
+    transition: all 0.5s;
+    box-shadow: 1px 2px 5px rgb(250, 248, 248);
+}
+li a:hover{
+    color: rgba(240, 67, 67, 1);
+    background-color: black;
+    text-shadow: 1px 1px 7px rgb(225, 116, 116);
+    background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+    border: 12px inset rgb(78, 78, 78);
+    box-shadow: 1px 5px 20px rgb(225, 116, 116);
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+    font-size: 30px;
+    
+    
+    
+}
+
+a {
+   text-decoration: none;
+   display: inline-block;
+  
+}
+
+body {
+    background-image: url(../images/FondoEstrellas.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: url(../images/Punteros/Color\ Light\ Saber.cur),auto;
+    min-height: 100vh;
+    background-color: rgb(150, 142, 142);
+    background-position: center bottom;
+}
+
+body.home{
+    background-image: url(../images/wallpapers/episodio7.jpg);
+}
+
+
+.cajaPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.BannerVader{
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    margin-top:30px;
+}
+.login{
+    font-size: 49px;
+    border-radius: 20px;
+    font-family: 'e2Bp';
+    font-weight: bold;
+    color: rgba(240, 67, 67, 1);
+    background-color: black;
+    background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+    border: 12px inset rgb(78, 78, 78);
+    padding: 10px 100px;
+    transition: all 1s;
+    margin-top: 150px;
+    
+
+}        
+        
+    .login:hover {
+    background-color: black;
+    color: rgb(255, 110, 110);
+    text-shadow: 3px 3px 20px rgb(240, 67, 67);
+    box-shadow: 1px 5px 20px rgb(225, 116, 116);
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+    font-size: 50px;
+    }
+        
+
+footer{
+    background-image: url(https://kit.fontawesome.com/7b0824ac80.js);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.muñequitos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    right:10px;
+    bottom:10px;
+
+
+}
+.muñequitos img{
+    height: 100px;
+
+    
+}
+
+.muñequitos i{
+    font-size:30px;
+    color: white;
+    text-shadow: 1px 1px 20px black;
+    
+}
+p{
+    color: white;
+    text-align: center;
+    padding: 17px;
+    font-family: "e2Bp";
+    font-variant: common-ligatures;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tituloFuerza{
+    color: white;
+    font-family: 'e2Bp';
+    height: 140px;
+    left: 0;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    animation: move linear 2000ms infinite;
+    z-index:2;
+    font-size: 100px;
+    margin-top: 50px;
+}
+     
+/*Animación para rotar las sombras*/
+@keyframes move {
+    0% {
+        text-shadow:
+        4px -4px 0 rgba(240, 67, 67, 1),
+        3px -3px 0 rgba(240, 67, 67, 1),
+        2px -2px 0 rgba(240, 67, 67, 1),   
+        1px -1px 0 rgba(240, 67, 67, 1),   
+        -4px 4px 0 rgba(67, 167, 233, 1),  
+        -3px 3px 0 rgba(67, 167, 233, 1), 
+        -2px 2px 0 rgba(67, 167, 233, 1), 
+        -1px 1px 0 rgba(67, 167, 233, 1);
+    }
+    
+    25% {
+        text-shadow: 
+        -4px -4px 0 rgba(67, 167, 233, 1), 
+        -3px -3px 0 rgba(67, 167, 233, 1),
+        -2px -2px 0 rgba(67, 167, 233, 1),
+        -1px -1px 0 rgba(67, 167, 233, 1),
+        4px 4px 0 rgba(240, 67, 67, 1),
+        3px 3px 0 rgba(240, 67, 67, 1),
+        2px 2px 0 rgba(240, 67, 67, 1),
+        1px 1px 0 rgba(240, 67, 67, 1);
+    }
+    
+    50% {
+        text-shadow:  
+        -4px 4px 0 rgba(240, 67, 67, 1),  
+        -3px 3px 0 rgba(240, 67, 67, 1),  
+        -2px 2px 0 rgba(240, 67, 67, 1),  
+        -1px 1px 0 rgba(240, 67, 67, 1),  
+        4px -4px 0 rgba(67, 167, 233, 1),   
+        3px -3px 0 rgba(67, 167, 233, 1),   
+        2px -2px 0 rgba(67, 167, 233, 1), 
+        1px -1px 0 rgba(67, 167, 233, 1);
+      }
+      
+      75% {
+          text-shadow:  
+          4px 4px 0 rgba(67, 167, 233, 1), 
+          3px 3px 0 rgba(67, 167, 233, 1), 
+          2px 2px 0 rgba(67, 167, 233, 1),  
+          1px 1px 0 rgba(67, 167, 233, 1),   
+          -4px -4px 0 rgba(240, 67, 67, 1),  
+          -3px -3px 0 rgba(240, 67, 67, 1),  
+          -2px -2px 0 rgba(240, 67, 67, 1), 
+          -1px -1px 0 rgba(240, 67, 67, 1);
+        }
+        100% {
+            text-shadow:
+            4px -4px 0 rgba(240, 67, 67, 1),       
+            3px -3px 0 rgba(240, 67, 67, 1),       
+            2px -2px 0 rgba(240, 67, 67, 1),      
+            1px -1px 0 rgba(240, 67, 67, 1),      
+            -4px 4px 0 rgba(67, 167, 233, 1),      
+            -3px 3px 0 rgba(67, 167, 233, 1),     
+            -2px 2px 0 rgba(67, 167, 233, 1),      
+            -1px 1px 0 rgba(67, 167, 233, 1);     
+          }
+      }
+
+      .cartelTitulo{
+            box-shadow: 3px 3px 20px rgb(250, 248, 248);
+
+
+      }
+
+/* HTML PELICULAS */
+
+.pelis{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 75px;
+    grid-row-gap: 60px;
+}
+
+.FotoPelis{
+    box-shadow: 1px 5px 20px rgb(255, 255, 255);
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+    height: 600px;
+    width: auto;
+    overflow:hidden;
+    transition: 1s;
+}
+.FotoPelis:hover {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.1);
+}
+
+
+/* HTML SERIES */
+.series{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        padding: 75px;
+        grid-row-gap: 60px;
+    }
+
+    /* HTML HISTORIA */
+
+    .historia{
+        padding: 55px;
+        background-color: black;
+    }
+
+    /* HTML personajes */
+
+    .slider-container img {
+        scroll-snap-align: center;
+      }
+
+      .slider-container {
+        display: flex;
+        width: 54%;
+        height: 88vh;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding: 43px;
+        scroll-snap-type: x mandatory;
+        box-shadow: 1px 5px 20px rgb(255 255 255);
+        background-color: black;
+        border-radius: 44px;
+        margin-top: 71px;
+        scroll-snap-type: x mandatory;
+      }
+      
+      .slider-container img {
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: center;
+        padding: 3em;
+    }
+      
+    .cuerpo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
+    /*  ---------------------RESPOSIVE------------------      */
+
+    .visibleMobile{
+        display: none;
+    }
+
+    /* TABLETS */
+    @media all and (min-width: 768px) and (max-width: 1024px){
+        .ocultoMobile{
+            display: none;
+        }
+        .visibleMobile{
+            display: block;
+
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .menu ul{
+            gap: 0.5em;
+            
+        }
+        .slider-container{
+            width: 100%;
+            height: 84vh;
+        }
+        .login{
+            margin-top: 7em;
+        }
+        footer{
+            justify-content: center;
+        }
+        .pelis{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .series{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .FotoPelis{
+            height: 413px;
+        }
+
+    }
+     /* SmartPhones */
+    @media all and (max-width: 768px){
+        .ocultoMobile{
+            display: none;
+        }
+        .visibleMobile{
+            display: block;
+
+        }
+        .menu{
+            flex-direction: column;
+        }
+        .menu ul{
+            gap: 0em;
+            padding: 0px;
+            
+        }
+
+        .cerrado{
+            height: 0px;
+            background-color: red;
+            overflow-y: hidden;
+        }
+        .tituloFuerza{
+            font-size: 50px;
+        }
+        .menu ul li a{
+            
+            font-size: 10px;
+            border: solid rgba(181, 169, 164, 1);
+            padding: 8px;
+        }
+        body#home{
+            background-position: center 107px;
+            background-color: black;
+        }
+        .pelis, .series {
+            display:flex;
+            flex-direction:column;
+        }
+        .muñequitos{
+            justify-content: space-between;
+        }
+        .cartelTitulo{
+            height:300px !important;
+        }
+        .slider-container{
+            width: 100%;
+            height: 75vh;
+            padding: 0px;
+        }
+        .pelis{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .series{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .FotoPelis{
+            height: 413px;
+        }
+        .login{
+            font-size: 29px;
+        }
+
+
+
+    }
+
+      
+
+
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+        
+    
+    
+    
+        
+    
+    
+        
+    
+    
+    
+    
+  
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* paleta de colores
+red-salsa: rgba(240, 67, 67, 1);
+blue-jeans: rgba(67, 167, 233, 1);
+black-shadows: rgba(181, 169, 164, 1);
+persian-orange: rgba(221, 140, 78, 1);
+bottle-green: rgba(51, 98, 79, 1); */
