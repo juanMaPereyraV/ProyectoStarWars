@@ -1,5 +1,5 @@
 
-@font-face {   
+@font-face {
     font-family:"e2Bp";
     src: url(../images/Fuentes/SfDistantGalaxyAltoutline-e2Bp.ttf);
 }
@@ -23,7 +23,7 @@ header{
 .logoStarWars{
     cursor: url(../images/Punteros/Color\ saber.cur),auto;
 }
-    
+
 
 .menu{
     margin: 15px;
@@ -50,6 +50,7 @@ li a{
     background: linear-gradient(45deg, rgba(255,255,255,1) 3%, rgba(173,173,173,1) 15%, rgba(255,255,255,1) 33%, rgba(162,162,162,1) 57%, rgba(255,255,255,1) 75%, rgba(185,185,185,1) 91%, rgba(249,249,249,1) 100%);
     transition: all 0.5s;
     box-shadow: 1px 2px 5px rgb(250, 248, 248);
+    text-decoration: none;
 }
 li a:hover{
     color: rgba(240, 67, 67, 1);
@@ -60,15 +61,15 @@ li a:hover{
     box-shadow: 1px 5px 20px rgb(225, 116, 116);
     cursor: url(../images/Punteros/Color\ saber.cur),auto;
     font-size: 30px;
-    
-    
-    
+
+
+
 }
 
 a {
    text-decoration: none;
    display: inline-block;
-  
+
 }
 
 body {
@@ -92,41 +93,59 @@ body.home{
     align-items: center;
 }
 
-
-
-
-
 .BannerVader{
     background-size: cover;
     width: 100%;
-    height: 50%;
+    height: 50%; 
     margin-top:30px;
 }
-.login{
-    font-size: 49px;
-    border-radius: 20px;
-    font-family: 'e2Bp';
-    font-weight: bold;
-    color: rgba(240, 67, 67, 1);
-    background-color: black;
-    background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
-    border: 12px inset rgb(78, 78, 78);
-    padding: 10px 100px;
-    transition: all 1s;
-    margin-top: 150px;
-    
 
-}        
-        
-    .login:hover {
-    background-color: black;
-    color: rgb(255, 110, 110);
-    text-shadow: 3px 3px 20px rgb(240, 67, 67);
-    box-shadow: 1px 5px 20px rgb(225, 116, 116);
-    cursor: url(../images/Punteros/Color\ saber.cur),auto;
-    font-size: 50px;
+
+    /* BS del index */
+    .bg-dark{
+        --bs-bg-opacity:0 !important;
     }
-        
+    .fw-bold{
+        font-family: 'e2Bp';
+        color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    .btn-outline-info{
+        font-size: 49px !important;
+        border-radius: 20px !important;
+        font-family: 'e2Bp' !important;
+        font-weight: bold !important;
+        color: rgba(240, 67, 67, 1) !important;
+        background-color: black !important;
+        background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%) !important;
+        border: 12px inset rgb(78, 78, 78) !important;
+        padding: 10px 100px !important;
+        transition: all 1s !important;
+        margin-top: 150px !important;
+    }
+    .btn-outline-info:hover{
+        background-color: black  !important;
+        color: rgb(255, 110, 110)  !important;
+        text-shadow: 3px 3px 20px rgb(240, 67, 67)  !important;
+        box-shadow: 1px 5px 20px rgb(225, 116, 116)  !important;
+        cursor: url(../images/Punteros/Color\ saber.cur),auto  !important;
+        font-size: 50px  !important;
+    }
+    .textoBS{
+        height: 140px;
+        left: 0;
+        letter-spacing: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        animation: move linear 2000ms infinite;
+        z-index:2;
+        font-size: 100px;
+        margin-top: 50px;
+    }
+
+
 
 footer{
     background-image: url(https://kit.fontawesome.com/7b0824ac80.js);
@@ -142,7 +161,7 @@ footer{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
+    width: 91%;
     right:10px;
     bottom:10px;
 
@@ -151,14 +170,19 @@ footer{
 .muñequitos img{
     height: 100px;
 
-    
+
 }
 
 .muñequitos i{
     font-size:30px;
     color: white;
-    text-shadow: 1px 1px 20px black;
-    
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+
+}
+
+.muñequitos i:hover{
+    font-size: 50px;
+    box-shadow: 1px 5px 20px rgb(225, 116, 116);
 }
 p{
     color: white;
@@ -184,24 +208,24 @@ p{
     font-size: 100px;
     margin-top: 50px;
 }
-     
+
 /*Animación para rotar las sombras*/
 @keyframes move {
     0% {
         text-shadow:
         4px -4px 0 rgba(240, 67, 67, 1),
         3px -3px 0 rgba(240, 67, 67, 1),
-        2px -2px 0 rgba(240, 67, 67, 1),   
-        1px -1px 0 rgba(240, 67, 67, 1),   
-        -4px 4px 0 rgba(67, 167, 233, 1),  
-        -3px 3px 0 rgba(67, 167, 233, 1), 
-        -2px 2px 0 rgba(67, 167, 233, 1), 
+        2px -2px 0 rgba(240, 67, 67, 1),
+        1px -1px 0 rgba(240, 67, 67, 1),
+        -4px 4px 0 rgba(67, 167, 233, 1),
+        -3px 3px 0 rgba(67, 167, 233, 1),
+        -2px 2px 0 rgba(67, 167, 233, 1),
         -1px 1px 0 rgba(67, 167, 233, 1);
     }
-    
+
     25% {
-        text-shadow: 
-        -4px -4px 0 rgba(67, 167, 233, 1), 
+        text-shadow:
+        -4px -4px 0 rgba(67, 167, 233, 1),
         -3px -3px 0 rgba(67, 167, 233, 1),
         -2px -2px 0 rgba(67, 167, 233, 1),
         -1px -1px 0 rgba(67, 167, 233, 1),
@@ -210,40 +234,40 @@ p{
         2px 2px 0 rgba(240, 67, 67, 1),
         1px 1px 0 rgba(240, 67, 67, 1);
     }
-    
+
     50% {
-        text-shadow:  
-        -4px 4px 0 rgba(240, 67, 67, 1),  
-        -3px 3px 0 rgba(240, 67, 67, 1),  
-        -2px 2px 0 rgba(240, 67, 67, 1),  
-        -1px 1px 0 rgba(240, 67, 67, 1),  
-        4px -4px 0 rgba(67, 167, 233, 1),   
-        3px -3px 0 rgba(67, 167, 233, 1),   
-        2px -2px 0 rgba(67, 167, 233, 1), 
+        text-shadow:
+        -4px 4px 0 rgba(240, 67, 67, 1),
+        -3px 3px 0 rgba(240, 67, 67, 1),
+        -2px 2px 0 rgba(240, 67, 67, 1),
+        -1px 1px 0 rgba(240, 67, 67, 1),
+        4px -4px 0 rgba(67, 167, 233, 1),
+        3px -3px 0 rgba(67, 167, 233, 1),
+        2px -2px 0 rgba(67, 167, 233, 1),
         1px -1px 0 rgba(67, 167, 233, 1);
       }
-      
+
       75% {
-          text-shadow:  
-          4px 4px 0 rgba(67, 167, 233, 1), 
-          3px 3px 0 rgba(67, 167, 233, 1), 
-          2px 2px 0 rgba(67, 167, 233, 1),  
-          1px 1px 0 rgba(67, 167, 233, 1),   
-          -4px -4px 0 rgba(240, 67, 67, 1),  
-          -3px -3px 0 rgba(240, 67, 67, 1),  
-          -2px -2px 0 rgba(240, 67, 67, 1), 
+          text-shadow:
+          4px 4px 0 rgba(67, 167, 233, 1),
+          3px 3px 0 rgba(67, 167, 233, 1),
+          2px 2px 0 rgba(67, 167, 233, 1),
+          1px 1px 0 rgba(67, 167, 233, 1),
+          -4px -4px 0 rgba(240, 67, 67, 1),
+          -3px -3px 0 rgba(240, 67, 67, 1),
+          -2px -2px 0 rgba(240, 67, 67, 1),
           -1px -1px 0 rgba(240, 67, 67, 1);
         }
         100% {
             text-shadow:
-            4px -4px 0 rgba(240, 67, 67, 1),       
-            3px -3px 0 rgba(240, 67, 67, 1),       
-            2px -2px 0 rgba(240, 67, 67, 1),      
-            1px -1px 0 rgba(240, 67, 67, 1),      
-            -4px 4px 0 rgba(67, 167, 233, 1),      
-            -3px 3px 0 rgba(67, 167, 233, 1),     
-            -2px 2px 0 rgba(67, 167, 233, 1),      
-            -1px 1px 0 rgba(67, 167, 233, 1);     
+            4px -4px 0 rgba(240, 67, 67, 1),
+            3px -3px 0 rgba(240, 67, 67, 1),
+            2px -2px 0 rgba(240, 67, 67, 1),
+            1px -1px 0 rgba(240, 67, 67, 1),
+            -4px 4px 0 rgba(67, 167, 233, 1),
+            -3px 3px 0 rgba(67, 167, 233, 1),
+            -2px 2px 0 rgba(67, 167, 233, 1),
+            -1px 1px 0 rgba(67, 167, 233, 1);
           }
       }
 
@@ -289,6 +313,23 @@ p{
         padding: 75px;
         grid-row-gap: 60px;
     }
+    .Cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 37px;
+        gap: 10%;
+    }
+    .textoCarta{
+        color: white;
+    }
+    .cuerpoCarta{
+        background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%) !important;
+    }
+    .tituloCarta{
+        color: white;
+    }
 
     /* HTML HISTORIA */
 
@@ -299,43 +340,36 @@ p{
 
     /* HTML personajes */
 
-    .slider-container img {
-        scroll-snap-align: center;
-      }
-
-      .slider-container {
-        display: flex;
-        width: 54%;
-        height: 88vh;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        padding: 43px;
-        scroll-snap-type: x mandatory;
-        box-shadow: 1px 5px 20px rgb(255 255 255);
-        background-color: black;
-        border-radius: 44px;
-        margin-top: 71px;
-        scroll-snap-type: x mandatory;
-      }
-      
-      .slider-container img {
-        flex: 0 0 100%;
-        width: 100%;
-        object-fit: cover;
-        scroll-snap-align: center;
-        padding: 3em;
+    .ContenedorCarousel{
+        padding: 15rem;
     }
-      
-    .cuerpo{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-     }
+    .bg-light{
+        background-image: url(../images/FondoEstrellas.jpeg)
+    }
+    .conteiner{
+        display: flex;
+        justify-content: center;
+    }
+    
+
+
     /*  ---------------------RESPOSIVE------------------      */
 
     .visibleMobile{
         display: none;
     }
+
+    /* HTML FORMULARIO */
+
+    .formu{
+        border: solid;
+        box-shadow: 1px 2px 5px rgb(250 248 248);
+        text-shadow: 1px 1px 7px rgb(234, 51, 51);
+        background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+        color: white;
+    }
+
+
 
     /* TABLETS */
     @media all and (min-width: 768px) and (max-width: 1024px){
@@ -353,7 +387,7 @@ p{
         }
         .menu ul{
             gap: 0.5em;
-            
+
         }
         .slider-container{
             width: 100%;
@@ -380,6 +414,11 @@ p{
         .FotoPelis{
             height: 413px;
         }
+        .Cards{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
 
     }
      /* SmartPhones */
@@ -397,7 +436,7 @@ p{
         .menu ul{
             gap: 0em;
             padding: 0px;
-            
+
         }
 
         .cerrado{
@@ -409,7 +448,7 @@ p{
             font-size: 50px;
         }
         .menu ul li a{
-            
+
             font-size: 10px;
             border: solid rgba(181, 169, 164, 1);
             padding: 8px;
@@ -452,46 +491,53 @@ p{
             font-size: 29px;
         }
 
+        .muñequitos{
+            width: 91%;
+        }
+        .Cards{
+            flex-direction: column;
+        }
+
 
 
     }
 
-      
 
 
-    
-    
-    
-    
-    
-        
-    
-    
-    
-    
-        
-    
-    
-    
-        
-    
-    
-        
-    
-    
-    
-    
-  
-      
-      
-      
-      
-      
-      
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
