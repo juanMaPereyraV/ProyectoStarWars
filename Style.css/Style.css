@@ -85,6 +85,13 @@ body {
 body.home{
     background-image: url(../images/wallpapers/episodio7.jpg);
 }
+body.homeForm{
+    background-image: url(../images/lukeObi.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 90px;
+}
 
 
 .cajaPrincipal{
