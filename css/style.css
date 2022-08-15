@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "e2Bp";
+  src: url(../images/Fuentes/SfDistantGalaxyAltoutline-e2Bp.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoStarWars {
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
+  text-align: center;
+}
+
+.cajaPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+.menu ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul li a {
+  border: 12px inset rgb(181, 169, 164);
+  font-size: 27px;
+  font-family: "e2Bp", sans-serif;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(45deg, rgb(255, 255, 255) 3%, rgb(173, 173, 173) 15%, rgb(255, 255, 255) 33%, rgb(162, 162, 162) 57%, rgb(255, 255, 255) 75%, rgb(185, 185, 185) 91%, rgb(249, 249, 249) 100%);
+  transition: all 0.5s;
+  box-shadow: 1px 2px 5px rgb(250, 248, 248);
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  color: rgb(240, 67, 67);
+  background-color: black;
+  text-shadow: 1px 1px 7px rgb(225, 116, 116);
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%);
+  border: 12px inset rgb(78, 78, 78);
+  box-shadow: 1px 5px 20px rgb(225, 116, 116);
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  background-image: url(../images/FondoEstrellas.jpeg);
+  background-size: 230vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  cursor: url(../images/Punteros/Color\ Light\ Saber.cur), auto;
+  background-color: rgb(150, 142, 142);
+  background-position: center bottom;
+}
+body.home {
+  background-image: url(../images/wallpapers/episodio7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* BS del index */
+.bg-dark {
+  --bs-bg-opacity:0 !important;
+}
+
+.fw-bold {
+  font-family: "e2Bp", sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.btn-outline-info {
+  font-size: 49px !important;
+  border-radius: 20px !important;
+  font-family: "e2Bp", sans-serif !important;
+  font-weight: bold !important;
+  color: rgb(240, 67, 67) !important;
+  background-color: black !important;
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%) !important;
+  border: 12px inset rgb(78, 78, 78) !important;
+  padding: 10px 100px !important;
+  transition: all 1s !important;
+  margin-top: 150px !important;
+}
+
+.btn-outline-info:hover {
+  background-color: black !important;
+  color: rgb(255, 110, 110) !important;
+  text-shadow: 3px 3px 20px rgb(240, 67, 67) !important;
+  box-shadow: 1px 5px 20px rgb(225, 116, 116) !important;
+  cursor: url(../images/Punteros/Color\ saber.cur), auto !important;
+  font-size: 50px !important;
+}
+
+.textoBS {
+  height: 140px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+  z-index: 2;
+  font-size: 100px;
+  margin-top: 50px;
+}
+
+footer {
+  background-image: url(https://kit.fontawesome.com/7b0824ac80.js);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.muñequitos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 91%;
+  right: 10px;
+  bottom: 10px;
+}
+.muñequitos img {
+  height: 100px;
+}
+.muñequitos i {
+  font-size: 30px;
+  color: white;
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
+}
+.muñequitos i:hover {
+  font-size: 50px;
+  box-shadow: 1px 5px 20px rgb(225, 116, 116);
+}
+
+p {
+  color: white;
+  text-align: center;
+  padding: 17px;
+  font-family: "e2Bp";
+  font-variant: common-ligatures;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tituloFuerza {
+  color: white;
+  font-family: "e2Bp", sans-serif;
+  height: 140px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+  z-index: 2;
+  font-size: 100px;
+  margin-top: 50px;
+}
+
+/*Animación para rotar las sombras*/
+@keyframes move {
+  0% {
+    text-shadow: 4px -4px 0 rgb(240, 67, 67), 3px -3px 0 rgb(240, 67, 67), 2px -2px 0 rgb(240, 67, 67), 1px -1px 0 rgb(240, 67, 67), -4px 4px 0 rgb(67, 167, 233), -3px 3px 0 rgb(67, 167, 233), -2px 2px 0 rgb(67, 167, 233), -1px 1px 0 rgb(67, 167, 233);
+  }
+  25% {
+    text-shadow: -4px -4px 0 rgb(67, 167, 233), -3px -3px 0 rgb(67, 167, 233), -2px -2px 0 rgb(67, 167, 233), -1px -1px 0 rgb(67, 167, 233), 4px 4px 0 rgb(240, 67, 67), 3px 3px 0 rgb(240, 67, 67), 2px 2px 0 rgb(240, 67, 67), 1px 1px 0 rgb(240, 67, 67);
+  }
+  50% {
+    text-shadow: -4px 4px 0 rgb(240, 67, 67), -3px 3px 0 rgb(240, 67, 67), -2px 2px 0 rgb(240, 67, 67), -1px 1px 0 rgb(240, 67, 67), 4px -4px 0 rgb(67, 167, 233), 3px -3px 0 rgb(67, 167, 233), 2px -2px 0 rgb(67, 167, 233), 1px -1px 0 rgb(67, 167, 233);
+  }
+  75% {
+    text-shadow: 4px 4px 0 rgb(67, 167, 233), 3px 3px 0 rgb(67, 167, 233), 2px 2px 0 rgb(67, 167, 233), 1px 1px 0 rgb(67, 167, 233), -4px -4px 0 rgb(240, 67, 67), -3px -3px 0 rgb(240, 67, 67), -2px -2px 0 rgb(240, 67, 67), -1px -1px 0 rgb(240, 67, 67);
+  }
+  100% {
+    text-shadow: 4px -4px 0 rgb(240, 67, 67), 3px -3px 0 rgb(240, 67, 67), 2px -2px 0 rgb(240, 67, 67), 1px -1px 0 rgb(240, 67, 67), -4px 4px 0 rgb(67, 167, 233), -3px 3px 0 rgb(67, 167, 233), -2px 2px 0 rgb(67, 167, 233), -1px 1px 0 rgb(67, 167, 233);
+  }
+}
+.visibleMobile {
+  display: none;
+}
+
+.cartelTitulo {
+  box-shadow: 3px 3px 20px rgb(250, 248, 248);
+}
+
+/* TABLETS */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .ocultoMobile {
+    display: none;
+  }
+  .visibleMobile {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu ul {
+    gap: 0.5em;
+  }
+  .menu ul li a:hover {
+    font-size: 30px;
+  }
+  .slider-container {
+    width: 100%;
+    height: 84vh;
+  }
+  .login {
+    margin-top: 7em;
+  }
+  footer {
+    justify-content: center;
+  }
+  .logoStarWars {
+    text-align: center;
+  }
+  .logoStarWars img {
+    width: 90vw;
+  }
+}
+/* SmartPhones */
+@media all and (max-width: 768px) {
+  .ocultoMobile {
+    display: none;
+  }
+  .visibleMobile {
+    display: block;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .cerrado {
+    background-color: red;
+    overflow-y: hidden;
+  }
+  .tituloFuerza {
+    font-size: 50px;
+  }
+  .menu ul li a {
+    font-size: 14px;
+    border: solid rgb(181, 169, 164);
+  }
+  .menu ul li a:hover {
+    font-size: 14px;
+    border: solid black;
+    box-shadow: 1px 5px 20px rgb(225, 116, 116);
+  }
+  body#home {
+    background-color: black;
+  }
+  .muñequitos {
+    justify-content: space-between;
+  }
+  .slider-container {
+    width: 100%;
+    height: 75vh;
+    padding: 0px;
+  }
+  .login {
+    font-size: 29px;
+  }
+  .muñequitos {
+    width: 91%;
+  }
+  .logoStarWars {
+    text-align: center;
+  }
+  .logoStarWars img {
+    width: 90vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
