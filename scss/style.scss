@@ -1,7 +1,9 @@
  @import './base/variables';
- @import './partials/index';
- @import './components/index';
+ @import './base/mixin';
+ @import './base/maps';
  @import './base/listas';
+ @import './base/extend';
+
  
 
  
@@ -26,15 +28,28 @@ header{
 
 }
 
+.fotoHeaderPelis{
+    background-image: url(../images/wallpapers/UltimaCena.jpg);
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.fotoHeaderSeries{
+    background-image: url(../images/wallpapers/lucha.jpg);
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+}
 
 .logoStarWars{
     cursor: url(../images/Punteros/Color\ saber.cur),auto;
     text-align: center;
 }
 .cajaPrincipal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: map-get($flexi, flexible);
+    align-items: map-get($flexi , alineacion )
 }
 
 //ANIDAMIENTO SASS y APLICACION DE VARIABLES
@@ -80,12 +95,11 @@ a {
 
 body {
     background-image: url(../images/FondoEstrellas.jpeg);
-    background-size: 230vh;
-    background-repeat: no-repeat;
+    background-size: 178vh;
     background-attachment: fixed;
     cursor: url(../images/Punteros/Color\ Light\ Saber.cur),auto;
     background-color: rgb(150, 142, 142);
-    background-position: center bottom;
+    background-position: center;
     &.home{
         background-image: url(../images/wallpapers/episodio7.jpg);
         background-size:cover;
@@ -93,6 +107,25 @@ body {
         background-attachment:scroll;
     }
     
+}
+body.homeForm{
+    background-image: url(../images/lukeObi.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 90px;
+}
+.cajaPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BannerVader{
+    background-size: cover;
+    width: 100%;
+    height: 50%; 
+    margin-top:30px;
 }
 
    /* BS del index */
@@ -143,9 +176,7 @@ body {
 
 footer{
     background-image: url(https://kit.fontawesome.com/7b0824ac80.js);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    @extend %disposicion;
 }
 
 
@@ -155,9 +186,7 @@ footer{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 91%;
-    right:10px;
-    bottom:10px;
+    @include medidas;
     img{
         height: 100px;
     }
@@ -260,6 +289,7 @@ p{
             -1px 1px 0 $color2;
           }
       }
+      
       .visibleMobile{
         display: none;
     }
@@ -267,6 +297,104 @@ p{
       .cartelTitulo{
             box-shadow: 3px 3px 20px rgb(250, 248, 248);
         }
+    
+        /* HTML PELICULAS */
+
+.pelis{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 75px;
+    grid-row-gap: 60px;
+}
+
+.FotoPelis{
+    box-shadow: 1px 5px 20px rgb(255, 255, 255);
+    cursor: url(../images/Punteros/Color\ saber.cur),auto;
+    height: 600px;
+    width: auto;
+    overflow:hidden;
+    transition: 1s;
+    &:hover{
+        -webkit-transform:scale(1.3);
+        transform:scale(1.1);
+         
+        
+    }
+}
+
+.cardTamaño{
+    width: 100%;
+}
+.row{
+    display:flex;
+    padding: 46px;
+    --bs-gutter-x: 0rem !important;
+    flex-wrap: nowrap !important;
+}
+
+/* HTML SERIES */
+.series{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 75px;
+    grid-row-gap: 60px;
+}
+
+.textoCarta{
+    color: white;
+}
+.cuerpoCarta{
+    background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%) !important;
+}
+.tituloCarta{
+    color: white;
+}
+
+/* HTML HISTORIA */
+
+.historia{
+    padding: 55px;
+    background-color: black;
+}
+
+/* HTML personajes */
+
+.ContenedorCarousel{
+    padding: 15rem;
+}
+.bg-light{
+    background-image: url(../images/FondoEstrellas.jpeg)
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+    /* HTML FORMULARIO */
+
+    .formu{
+        border: solid;
+        box-shadow: 1px 2px 5px rgb(250 248 248);
+        text-shadow: 1px 1px 7px rgb(234, 51, 51);
+        background: linear-gradient(45deg, rgba(56,56,56,1) 3%, rgba(0,0,0,1) 15%, rgba(62,62,62,1) 33%, rgba(0,0,0,1) 57%, rgba(78,78,78,1) 75%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+        color: white;
+        padding: 20px !important;
+    }
+
+
+
+/*  ---------------------RESPOSIVE------------------      */
+
+.visibleMobile{
+    display: none;
+}
+        
+        
         /* TABLETS */
     @media all and (min-width: 768px) and (max-width: 1024px){
         
@@ -308,6 +436,26 @@ p{
             img{
                 width:90vw;
             }
+        }
+
+        .pelis{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .series{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .FotoPelis{
+            height: 413px;
+        }
+        .Cards{
+            display: flex;
+            flex-direction: column;
         }
        }
         
@@ -352,6 +500,11 @@ p{
         body#home{
             background-color: black;
         }
+        
+        .pelis, .series {
+            display:flex;
+            flex-direction:column;
+        }
 
         .muñequitos{
             justify-content: space-between;
@@ -362,6 +515,21 @@ p{
             height: 75vh;
             padding: 0px;
         }
+        .pelis{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .series{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        .FotoPelis{
+            height: 413px;
+        }
 
         .login{
             font-size: 29px;
@@ -369,6 +537,9 @@ p{
 
         .muñequitos{
             width: 91%;
+        }
+        .Cards{
+            flex-direction: column;
         }
         .logoStarWars{
             text-align: center;

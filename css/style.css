@@ -1,4 +1,10 @@
 @charset "UTF-8";
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 @font-face {
   font-family: "e2Bp";
   src: url(../images/Fuentes/SfDistantGalaxyAltoutline-e2Bp.ttf);
@@ -16,6 +22,22 @@ header {
   align-items: center;
 }
 
+.fotoHeaderPelis {
+  background-image: url(../images/wallpapers/UltimaCena.jpg);
+  width: 100%;
+  background-size: cover;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.fotoHeaderSeries {
+  background-image: url(../images/wallpapers/lucha.jpg);
+  width: 100%;
+  background-size: cover;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
 .logoStarWars {
   cursor: url(../images/Punteros/Color\ saber.cur), auto;
   text-align: center;
@@ -23,7 +45,6 @@ header {
 
 .cajaPrincipal {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -34,7 +55,7 @@ header {
   list-style: none;
   margin-bottom: 20px;
   padding: 20px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -67,12 +88,11 @@ a {
 
 body {
   background-image: url(../images/FondoEstrellas.jpeg);
-  background-size: 230vh;
-  background-repeat: no-repeat;
+  background-size: 100%;
   background-attachment: fixed;
   cursor: url(../images/Punteros/Color\ Light\ Saber.cur), auto;
   background-color: rgb(150, 142, 142);
-  background-position: center bottom;
+  background-position: center;
 }
 body.home {
   background-image: url(../images/wallpapers/episodio7.jpg);
@@ -81,9 +101,30 @@ body.home {
   background-attachment: scroll;
 }
 
+body.homeForm {
+  background-image: url(../images/lukeObi.jpg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 90px;
+}
+
+.cajaPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BannerVader {
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  margin-top: 30px;
+}
+
 /* BS del index */
-.bg-dark {
-  --bs-bg-opacity:0 !important;
+.bgNegro {
+  --bs-bg-opacity:0;
 }
 
 .fw-bold {
@@ -93,27 +134,27 @@ body.home {
   text-transform: uppercase;
 }
 
-.btn-outline-info {
-  font-size: 49px !important;
-  border-radius: 20px !important;
-  font-family: "e2Bp", sans-serif !important;
-  font-weight: bold !important;
-  color: rgb(240, 67, 67) !important;
-  background-color: black !important;
-  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%) !important;
-  border: 12px inset rgb(78, 78, 78) !important;
-  padding: 10px 100px !important;
-  transition: all 1s !important;
-  margin-top: 150px !important;
+.btnNegro {
+  font-size: 49px ;
+  border-radius: 20px ;
+  font-family: "e2Bp", sans-serif ;
+  font-weight: bold ;
+  color: rgb(240, 67, 67) ;
+  background-color: black ;
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%) ;
+  border: 12px inset rgb(78, 78, 78) ;
+  padding: 10px 100px ;
+  transition: all 1s ;
+  margin-top: 150px ;
 }
 
-.btn-outline-info:hover {
-  background-color: black !important;
-  color: rgb(255, 110, 110) !important;
-  text-shadow: 3px 3px 20px rgb(240, 67, 67) !important;
-  box-shadow: 1px 5px 20px rgb(225, 116, 116) !important;
-  cursor: url(../images/Punteros/Color\ saber.cur), auto !important;
-  font-size: 50px !important;
+.btnNegro:hover {
+  background-color: black ;
+  color: rgb(255, 110, 110) ;
+  text-shadow: 3px 3px 20px rgb(240, 67, 67) ;
+  box-shadow: 1px 5px 20px rgb(225, 116, 116) ;
+  font-size: 50px ;
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
 }
 
 .textoBS {
@@ -131,9 +172,6 @@ body.home {
 
 footer {
   background-image: url(https://kit.fontawesome.com/7b0824ac80.js);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 
 .muñequitos {
@@ -210,6 +248,99 @@ p {
   box-shadow: 3px 3px 20px rgb(250, 248, 248);
 }
 
+/* HTML PELICULAS */
+.pelis {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 75px;
+  grid-row-gap: 60px;
+}
+
+.FotoPelis {
+  box-shadow: 1px 5px 20px rgb(255, 255, 255);
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
+  height: 600px;
+  width: auto;
+  overflow: hidden;
+  transition: 1s;
+}
+.FotoPelis:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+}
+
+.cardTamaño {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  padding: 46px;
+  --bs-gutter-x: 0rem !important;
+  flex-wrap: nowrap !important;
+}
+
+/* HTML SERIES */
+.series {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 75px;
+  grid-row-gap: 60px;
+}
+
+.textoCarta {
+  color: white;
+}
+
+.cuerpoCarta {
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%) !important;
+}
+
+.tituloCarta {
+  color: white;
+}
+
+/* HTML HISTORIA */
+.historia {
+  padding: 55px;
+  background-color: black;
+}
+
+/* HTML personajes */
+.ContenedorCarousel {
+  padding: 15rem;
+}
+
+.bg-light {
+  background-image: url(../images/FondoEstrellas.jpeg);
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+/* HTML FORMULARIO */
+.formu {
+  border: solid;
+  box-shadow: 1px 2px 5px rgb(250, 248, 248);
+  text-shadow: 1px 1px 7px rgb(234, 51, 51);
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%);
+  color: white;
+  padding: 20px !important;
+}
+
+/*  ---------------------RESPOSIVE------------------      */
+.visibleMobile {
+  display: none;
+}
+
 /* TABLETS */
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .ocultoMobile {
@@ -245,6 +376,25 @@ p {
   .logoStarWars img {
     width: 90vw;
   }
+  .pelis {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .series {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .FotoPelis {
+    height: 413px;
+  }
+  .Cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* SmartPhones */
 @media all and (max-width: 768px) {
@@ -262,7 +412,7 @@ p {
     overflow-y: hidden;
   }
   .tituloFuerza {
-    font-size: 50px;
+    font-size: 40px;
   }
   .menu ul li a {
     font-size: 14px;
@@ -276,6 +426,10 @@ p {
   body#home {
     background-color: black;
   }
+  .pelis, .series {
+    display: flex;
+    flex-direction: column;
+  }
   .muñequitos {
     justify-content: space-between;
   }
@@ -284,11 +438,29 @@ p {
     height: 75vh;
     padding: 0px;
   }
+  .pelis {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .series {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .FotoPelis {
+    height: 413px;
+  }
   .login {
     font-size: 29px;
   }
   .muñequitos {
     width: 91%;
+  }
+  .Cards {
+    flex-direction: column;
   }
   .logoStarWars {
     text-align: center;

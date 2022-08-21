@@ -18,6 +18,20 @@ header{
     align-items: center;
 
 }
+.fotoHeaderPelis{
+    background-image: url(../images/wallpapers/UltimaCena.jpg);
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.fotoHeaderSeries{
+    background-image: url(../images/wallpapers/lucha.jpg);
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+}
 
 
 .logoStarWars{
