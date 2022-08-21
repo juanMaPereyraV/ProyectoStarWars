@@ -1,0 +1,16 @@
+
+SEO:
+Se le agrego la descripcion a cada etiqueta ALT de los HTML.
+Se le agrego el titulo descriptivo en el Head a todos los HTML.
+Se le incluyo las etiquetas metas con alguna palbras claves a todos los HTML.
+
+
+SASS:
+Se aplico Sass a todo el proyecto.
+Se craron archivos:
+Map
+extend
+mixin
+variables
+listas
+Los mismos fueron aplicados a distintos estilos dentro de la carpeta Style.scss
