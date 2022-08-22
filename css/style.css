@@ -308,6 +308,16 @@ p {
   color: white;
 }
 
+a.btn {
+  background: linear-gradient(45deg, rgb(56, 56, 56) 3%, rgb(0, 0, 0) 15%, rgb(62, 62, 62) 33%, rgb(0, 0, 0) 57%, rgb(78, 78, 78) 75%, rgb(0, 0, 0) 91%, rgb(0, 0, 0) 100%);
+  border-color: white;
+  font-family: "e2Bp";
+  font-weight: bold;
+}
+a.btn:hover {
+  border-color: red;
+}
+
 /* HTML HISTORIA */
 .historia {
   padding: 55px;
@@ -414,7 +424,7 @@ p {
     overflow-y: hidden;
   }
   .tituloFuerza {
-    font-size: 50px;
+    font-size: 46px;
   }
   .menu ul li a {
     font-size: 14px;
