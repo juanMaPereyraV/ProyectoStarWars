@@ -3,6 +3,7 @@
  @import './base/maps';
  @import './base/listas';
  @import './base/extend';
+ @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
  
 
@@ -56,12 +57,13 @@ header{
 .menu{
     display: flex;
     ul{
-        list-style: none;
-        margin-bottom: 20px;
-        padding: 20px;
-        display: inline-flex;
+        list-style: none;;
+        display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 4px;
+        padding: 0 4px;
+        gap: 5px;
         li{
             a{
                 border: 12px inset rgba(181, 169, 164, 1);
@@ -81,7 +83,7 @@ header{
                     border: 12px inset rgb(78, 78, 78);
                     box-shadow: 1px 5px 20px rgb(225, 116, 116);
                     cursor: url(../images/Punteros/Color\ saber.cur),auto;
-                    font-size: 30px;
+                    font-size: 27px;
                 }
             }
         }
