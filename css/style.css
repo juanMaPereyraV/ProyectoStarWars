@@ -383,10 +383,10 @@ a.btn:hover {
     justify-content: center;
   }
   .logoStarWars {
-    text-align: center;
+    justify-content: center;
   }
   .logoStarWars img {
-    width: 90vw;
+    width: 60vw;
   }
   .pelis {
     display: grid;
