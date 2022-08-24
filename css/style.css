@@ -126,7 +126,7 @@ body.homeForm {
 
 /* BS del index */
 .button {
-  --bs-bg-opacity:0;
+  --bs-bg-opacity: 0;
 }
 
 .bgNegro {
@@ -274,8 +274,8 @@ p {
   transform: scale(1.1);
 }
 
-.cardTamaño {
-  width: 100%;
+.cardTamaño:hover {
+  box-shadow: 1px 5px 20px rgb(225, 116, 116);
 }
 
 .row {
@@ -316,6 +316,13 @@ a.btn {
 }
 a.btn:hover {
   border-color: red;
+  cursor: url(../images/Punteros/Color\ saber.cur), auto;
+}
+
+.trailers {
+  width: 98%;
+  gap: 27px;
+  cursor: url(../images/Punteros/Color\ Light\ Saber.cur), auto;
 }
 
 /* HTML HISTORIA */
@@ -438,7 +445,8 @@ a.btn:hover {
   body#home {
     background-color: black;
   }
-  .pelis, .series {
+  .pelis,
+.series {
     display: flex;
     flex-direction: column;
   }
@@ -482,4 +490,4 @@ a.btn:hover {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+
